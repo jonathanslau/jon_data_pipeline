@@ -6,3 +6,6 @@ __pycache__/
 storage/raw/*
 storage/staging/*
 storage/analysis/*
+src/scratch.py
+notebooks/scratch.ipynb
+scratch.json

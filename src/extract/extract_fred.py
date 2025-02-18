@@ -1,8 +1,12 @@
 import requests
 import pandas as pd
 
-def extract_fred_data(root_dir:str, API_KEY: str, data_series_name:str, data_series_id: str):
-    """Retrieve economic series from St Louis FED"""
+def get_fred_data(root_dir:str, API_KEY: str, data_series_name:str, data_series_id: str):
+    """
+    Retrieve economic series from St Louis FED
+    There is no pagination to handle
+    Dataset is small enough to request its entirety every call
+    """
 
     if not data_series_id:
         raise ValueError('Error: Provide FRED series ID.')
